@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">
+                <h1>[Nama Anda]</h1>
+                <!-- Atau bisa juga logo gambar: <img src="assets/images/logo.png" alt="Logo"> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hi, I'm [Nama Anda]</h1>
+                    <p class="tagline">Full-stack Laravel Developer</p>
+                    <p class="hero-joke">"Aku akan menjadi Developer Terkuat di Dunia... setelah tidur siang." - Saitama (versi programmer)</p>
+                    <div class="hero-buttons">
+                        <a href="path/to/your/cv.pdf" class="btn btn-primary" download>Download CV</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-me py-5">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://via.placeholder.com/250" alt="Foto Profil [Nama Anda]" id="profile-pic">
+                        <!-- Ganti https://via.placeholder.com/250 dengan path ke foto profil Anda di assets/images/namafoto.jpg -->
+                    </div>
+                    <div class="about-text">
+                        <p>Halo! Saya [Nama Anda], seorang <strong>Full-stack Laravel Developer</strong> yang antusias dengan dunia coding dan teknologi. Saya memiliki hasrat untuk membangun aplikasi web yang bersih, efisien, dan memberikan solusi nyata. Seperti Ayanokoji Kiyotaka, saya mungkin terlihat pendiam, tapi di balik layar, saya selalu menganalisis dan mencari cara terbaik untuk menyelesaikan masalah (coding tentunya, bukan memanipulasi teman sekelas!).</p>
+                        <p>Saya percaya bahwa belajar adalah proses seumur hidup, terutama di bidang teknologi yang berkembang pesat. Saya selalu ingin tahu dan senang mengeksplorasi teknologi baru untuk meningkatkan keahlian saya. Saat tidak sedang ngoding, saya mungkin sedang mencari bug di kode saya atau mencari referensi untuk proyek selanjutnya... mirip detektif L yang mencari Kira, tapi versi developernya.</p>
+                        <p>Keahlian utama saya terletak pada pengembangan backend dengan <strong>PHP dan Laravel</strong>, serta frontend dengan <strong>HTML, CSS, JavaScript, dan Vue.js</strong>. Saya juga familiar dengan berbagai tools pendukung pengembangan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section py-5">
+            <div class="container">
+                <h2 class="section-title">My Coding Arsenal (Skills)</h2>
+                <div class="skills-grid">
+                    <!-- Backend Skills -->
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fab fa-php skill-icon"></i> PHP</div>
+                            <div class="skill-item"><i class="fab fa-laravel skill-icon"></i> Laravel</div>
+                            <div class="skill-item"><i class="fab fa-node-js skill-icon"></i> Node.js (Express.js)</div>
+                            <div class="skill-item"><i class="fas fa-database skill-icon"></i> MySQL</div>
+                            <div class="skill-item"><i class="fas fa-database skill-icon"></i> PostgreSQL</div>
+                            <div class="skill-item"><i class="fas fa-cogs skill-icon"></i> RESTful API</div>
+                        </div>
+                    </div>
+
+                    <!-- Frontend Skills -->
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fab fa-html5 skill-icon"></i> HTML5</div>
+                            <div class="skill-item"><i class="fab fa-css3-alt skill-icon"></i> CSS3</div>
+                            <div class="skill-item"><i class="fab fa-js-square skill-icon"></i> JavaScript (ES6+)</div>
+                            <div class="skill-item"><i class="fab fa-vuejs skill-icon"></i> Vue.js</div>
+                            <div class="skill-item"><i class="fab fa-bootstrap skill-icon"></i> Tailwind CSS (atau ikon generik jika tidak ada)</div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category">
+                        <h3>Tools & Platforms</h3>
+                        <div class="skills-list">
+                            <div class="skill-item"><i class="fab fa-git-alt skill-icon"></i> Git & GitHub</div>
+                            <div class="skill-item"><i class="fab fa-docker skill-icon"></i> Docker</div>
+                            <div class="skill-item"><i class="fas fa-code skill-icon"></i> VS Code</div>
+                            <div class="skill-item"><i class="fas fa-rocket skill-icon"></i> Postman</div>
+                        </div>
+                         <p class="skills-joke">"Dengan skill sebanyak ini, aku merasa seperti Rimuru Tempest yang habis menyerap kemampuan musuh!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section py-5">
+            <div class="container">
+                <h2 class="section-title">My Creations (Projects)</h2>
+                <p class="section-subtitle">Beberapa proyek yang pernah saya kerjakan, dari iseng sampai yang bikin begadang kayak nonton anime marathon!</p>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/350x200/66CDAA/FFFFFF?text=Project+Alpha" alt="Screenshot Proyek Alpha" class="project-image">
+                        <!-- Ganti dengan path gambar Anda: assets/images/project-alpha.jpg -->
+                        <div class="project-info">
+                            <h3 class="project-title">Proyek Alpha</h3>
+                            <p class="project-description">Sistem manajemen inventaris berbasis web dengan Laravel. Fitur utama termasuk CRUD produk, manajemen kategori, dan laporan stok. "Ini adalah awal dari dominasi duniaku... maksudku, portofolioku!"</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary btn-small">View Demo</a>
+                                <a href="#" class="btn btn-secondary btn-small">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/350x200/FFD700/333333?text=Project+Beta" alt="Screenshot Proyek Beta" class="project-image">
+                        <!-- Ganti dengan path gambar Anda: assets/images/project-beta.jpg -->
+                        <div class="project-info">
+                            <h3 class="project-title">Proyek Beta</h3>
+                            <p class="project-description">Website portofolio pribadi (seperti yang ini!) dibangun dengan HTML, CSS, dan JavaScript. Fokus pada desain responsif dan UI yang menarik. "Desainnya se-elegan Levi Ackerman membersihkan Titan."</p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary btn-small">View Demo</a>
+                                <a href="#" class="btn btn-secondary btn-small">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <img src="https://via.placeholder.com/350x200/87CEEB/FFFFFF?text=Project+Gamma" alt="Screenshot Proyek Gamma" class="project-image">
+                        <!-- Ganti dengan path gambar Anda: assets/images/project-gamma.jpg -->
+                        <div class="project-info">
+                            <h3 class="project-title">Proyek Gamma</h3>
+                            <p class="project-description">Aplikasi to-do list sederhana dengan Vue.js dan Local Storage. Membantu mengatur tugas harian agar tidak lupa seperti Aqua dari Konosuba. </p>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-primary btn-small">View Demo</a>
+                                <a href="#" class="btn btn-secondary btn-small">Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Tambahkan lebih banyak proyek jika ada -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section py-5">
+            <div class="container">
+                <h2 class="section-title">Get In Touch (Or Just Say Hi!)</h2>
+                <p class="section-subtitle">Punya pertanyaan, tawaran proyek, atau cuma mau diskusi soal episode terbaru anime favoritmu? Jangan ragu untuk menghubungiku. Aku tidak akan ghosting seperti karakter utama di beberapa cerita!</p>
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <form action="#" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nama (Biar aku tahu siapa yang sekeren Gojo Satoru):</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email (Untuk balasan secepat kilat, bukan seperti Guts menunggu Casca):</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan (Sampaikan unek-unekmu, jangan dipendam seperti perasaan ke Alya-san):</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Pesan (Semoga Terkirim ke Isekai yang Benar!)</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Info Kontak Lainnya:</h3>
+                        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:emailanda@example.com">emailanda@example.com</a></p>
+                        <p><i class="fas fa-map-marker-alt"></i> Lokasi: Planet Namek (Bercanda, di [Kota Anda], Indonesia)</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/usernameanda" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/usernameanda" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                            <!-- Tambahkan media sosial lain jika ada -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> [Nama Anda]. All Rights Reserved.</p>
+            <p>Dibuat dengan <i class="fas fa-heart" style="color: red;"></i> dan secangkir kopi (atau teh, tergantung mood).</p>
+            <p class="credit-imphen">Special thanks to "Ingin Menjadi Programmer Namun Enggan Ngoding (IMPHEN)" community. Arigatou gozaimasu!</p>
+            <p class="footer-joke">"Website ini akan terus berkembang, sama seperti plot di anime kesayanganmu!"</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

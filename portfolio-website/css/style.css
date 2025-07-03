@@ -1,0 +1,658 @@
+/* CSS Dasar - Akan diperbarui nanti */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background-color: #f0f8ff; /* AliceBlue - warna dasar yang fresh */
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Tema Warna Remaja (contoh awal) */
+:root {
+    --primary-color: #66CDAA; /* MediumAquaMarine - fresh dan energik */
+    --secondary-color: #FFD700; /* Gold - untuk aksen, optimis */
+    --text-color: #333;
+    --background-light: #f0f8ff;
+    --background-dark: #2c3e50; /* Dark blue-grey, kontras */
+    --card-background: #ffffff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Joke Anime Sederhana */
+body::before {
+    content: "Apakah kamu tahu? Programmer itu seperti penyihir di dunia modern, tapi bukannya mantra, kita pakai kode! - Gojo Satoru (mungkin)";
+    display: block;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 5px;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+/* Nanti akan ditambahkan styling lebih detail per bagian */
+
+/* Header Styling */
+header {
+    background: var(--background-dark);
+    color: #ffffff;
+    padding: 1rem 0;
+    position: fixed; /* Membuat header tetap di atas saat scroll */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Memastikan header di atas elemen lain */
+    box-shadow: 0 2px 5px var(--shadow-color);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--secondary-color); /* Warna gold untuk nama/logo */
+}
+
+header nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color); /* Warna MediumAquaMarine saat hover */
+    text-shadow: 0 0 5px var(--primary-color); /* Efek glow tipis */
+}
+
+/* Penyesuaian untuk body karena header fixed */
+body {
+    padding-top: 70px; /* Sesuaikan dengan tinggi header Anda */
+}
+
+/* General Button Styling */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px; /* Rounded button */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(102, 205, 170, 0.4); /* Shadow for primary button */
+}
+
+.btn-primary:hover {
+    background-color: #57b395; /* Darker shade of primary */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 205, 170, 0.5);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4); /* Shadow for secondary button */
+}
+
+.btn-secondary:hover {
+    background-color: #e6c300; /* Darker shade of secondary */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+}
+
+
+/* Hero Section Styling */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #87CEEB 100%); /* SkyBlue - gradasi fresh */
+    color: #fff;
+    height: calc(100vh - 70px); /* Tinggi viewport dikurangi tinggi header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative; /* Untuk pseudo-elements jika diperlukan */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content .tagline {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.hero-content .hero-joke {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+/* Utility Classes */
+.py-5 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--background-dark);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+/* About Me Section Styling */
+.about-me {
+    background-color: var(--background-light); /* Warna latar yang sedikit berbeda */
+}
+
+.about-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the start for better text flow with image */
+    gap: 40px; /* Jarak antara gambar dan teks */
+}
+
+.about-image {
+    flex-basis: 30%; /* Lebar untuk kontainer gambar */
+    text-align: center;
+}
+
+.about-image img#profile-pic {
+    width: 250px; /* Lebar gambar */
+    height: 250px; /* Tinggi gambar */
+    border-radius: 50%; /* Membuat gambar melingkar */
+    object-fit: cover; /* Memastikan gambar terisi tanpa distorsi */
+    border: 5px solid var(--primary-color); /* Bingkai dengan warna primer */
+    box-shadow: 0 0 20px rgba(102, 205, 170, 0.5); /* Bayangan halus */
+}
+
+.about-text {
+    flex-basis: 70%; /* Lebar untuk kontainer teks */
+    text-align: justify;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+    color: var(--primary-color);
+}
+
+/* Skills Section Styling */
+.skills-section {
+    background-color: #ffffff; /* Latar putih untuk kontras */
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grid responsif */
+    gap: 30px;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background-color: var(--card-background);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.skill-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap; /* Agar item skill bisa wrap jika tidak cukup tempat */
+    gap: 15px; /* Jarak antar item skill */
+}
+
+.skill-item {
+    background-color: var(--background-light);
+    color: var(--text-color);
+    padding: 10px 15px;
+    border-radius: 20px; /* Membuat item skill seperti pil */
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.skill-icon {
+    color: var(--secondary-color); /* Warna ikon */
+    font-size: 1.2rem;
+}
+
+.skill-item:hover .skill-icon {
+    color: #fff;
+}
+
+.skills-joke {
+    margin-top: 20px;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Projects Section Styling */
+.projects-section {
+    background-color: var(--background-light);
+}
+
+.section-subtitle {
+    text-align: center;
+    max-width: 700px;
+    margin: -2rem auto 3rem auto;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Grid responsif untuk proyek */
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--card-background);
+    border-radius: 10px;
+    overflow: hidden; /* Untuk memastikan gambar tidak keluar dari border-radius */
+    box-shadow: 0 5px 20px var(--shadow-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Konten di dalam kartu disusun vertikal */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px; /* Tinggi tetap untuk gambar proyek */
+    object-fit: cover; /* Gambar akan terisi tanpa distorsi */
+    display: block;
+}
+
+.project-info {
+    padding: 20px;
+    flex-grow: 1; /* Memastikan info mengambil sisa ruang */
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 1.6rem;
+    color: var(--background-dark);
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Deskripsi mengambil ruang yang tersedia */
+}
+
+.project-links {
+    margin-top: auto; /* Mendorong link ke bawah kartu */
+}
+
+.project-links .btn-small {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    background-color: #ffffff; /* Latar putih bersih */
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap; /* Agar responsif di layar kecil */
+    gap: 40px;
+    margin-top: 2rem;
+}
+
+.contact-form-container {
+    flex: 2; /* Form mengambil lebih banyak ruang */
+    min-width: 300px; /* Lebar minimum untuk form */
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box; /* Agar padding tidak menambah lebar total */
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 205, 170, 0.5);
+}
+
+.contact-form textarea {
+    resize: vertical; /* Hanya bisa di-resize vertikal */
+    min-height: 120px;
+}
+
+.contact-form button[type="submit"] {
+    width: auto;
+    padding: 12px 30px;
+    /* Styling tombol sudah ada di .btn dan .btn-primary */
+}
+
+.contact-info {
+    flex: 1; /* Info kontak mengambil sisa ruang */
+    min-width: 280px; /* Lebar minimum */
+    background-color: var(--background-light);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.contact-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color);
+}
+
+.contact-info p i {
+    margin-right: 10px;
+    color: var(--primary-color);
+    width: 20px; /* Agar ikon sejajar */
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #57b395; /* Darker shade of primary */
+}
+
+.social-links {
+    margin-top: 25px;
+}
+
+.social-links a {
+    color: var(--background-dark);
+    font-size: 2rem; /* Ukuran ikon sosial media */
+    margin-right: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.1); /* Efek zoom kecil saat hover */
+}
+
+.social-links a:last-child {
+    margin-right: 0;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--background-dark);
+    color: #e0e0e0; /* Warna teks lebih terang untuk kontras dengan background gelap */
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem; /* Memberi jarak dari konten terakhir */
+}
+
+footer .container p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+footer .credit-imphen {
+    font-style: italic;
+    color: var(--secondary-color); /* Warna gold untuk kredit */
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+footer .footer-joke {
+    font-size: 0.8em;
+    color: #b0b0b0;
+    margin-top: 0.8rem;
+}
+
+footer i.fa-heart {
+    animation: pulseHeart 1.5s infinite; /* Animasi detak jantung */
+}
+
+@keyframes pulseHeart {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* -------------------- Media Queries untuk Responsivitas -------------------- */
+
+/* Untuk Tablet (misalnya, lebar hingga 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Kontainer lebih lebar di tablet */
+    }
+
+    header .container {
+        flex-direction: column; /* Logo dan nav bertumpuk */
+        align-items: center;
+    }
+
+    header #logo {
+        margin-bottom: 10px;
+    }
+
+    header nav ul {
+        text-align: center;
+    }
+
+    header nav ul li {
+        margin: 0 10px; /* Mengurangi margin antar item nav */
+        display: block; /* Membuat item nav menjadi block untuk tumpukan */
+        margin-bottom: 10px;
+    }
+
+    body {
+        padding-top: 120px; /* Sesuaikan dengan tinggi header baru yang mungkin lebih tinggi */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; /* Ukuran font lebih kecil untuk hero title */
+    }
+
+    .hero-content .tagline {
+        font-size: 1.5rem; /* Ukuran font lebih kecil untuk tagline */
+    }
+
+    .about-content {
+        flex-direction: column; /* Gambar dan teks bertumpuk */
+        align-items: center; /* Pusatkan konten */
+    }
+
+    .about-image {
+        margin-bottom: 30px;
+        flex-basis: auto; /* Reset flex-basis */
+    }
+
+    .about-text {
+        flex-basis: auto; /* Reset flex-basis */
+        text-align: left; /* Kembalikan ke text-align kiri jika diperlukan */
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk skill di tablet */
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk proyek di tablet */
+    }
+
+    .contact-content {
+        flex-direction: column; /* Form dan info kontak bertumpuk */
+    }
+
+    .contact-form-container, .contact-info {
+        width: 100%; /* Lebar penuh untuk form dan info */
+    }
+}
+
+/* Untuk Mobile (misalnya, lebar hingga 576px) */
+@media (max-width: 576px) {
+    body {
+        padding-top: 150px; /* Sesuaikan lagi jika header lebih tinggi */
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content .tagline {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 10px 20px; /* Tombol lebih kecil */
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 2rem; /* Judul bagian lebih kecil */
+    }
+
+    .about-image img#profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .project-card {
+        margin-bottom: 20px; /* Beri jarak antar kartu proyek jika bertumpuk */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        padding: 10px;
+    }
+
+    .social-links a {
+        font-size: 1.8rem; /* Ikon sosial media sedikit lebih kecil */
+        margin-right: 15px;
+    }
+
+    header nav ul li {
+        margin: 0 5px; /* Mengurangi margin antar item nav */
+        margin-bottom: 8px;
+    }
+}
